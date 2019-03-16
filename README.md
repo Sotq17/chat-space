@@ -17,8 +17,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|null: false|
-|group_id|integer|null: false|
+|user_id|refernces|foreign_key:true|
+|group_id|refernces|foreign_key:true|
 |body|text|
 |image|string|
 
@@ -46,7 +46,7 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|index: true, null: false|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Association
 - has_many :messages
