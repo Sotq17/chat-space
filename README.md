@@ -17,8 +17,13 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
+<<<<<<< HEAD
 |user_id|refernces|foreign_key:true|
 |group_id|refernces|foreign_key:true|
+=======
+|user_id|integer|null: false|
+|group_id|integer|null: false|
+>>>>>>> 4eec78d3e5c9f762cdf01c0177ef2bf3c371d49a
 |body|text|
 |image|string|
 
@@ -46,7 +51,11 @@ Things you may want to cover:
 |Column|Type|Options|
 |------|----|-------|
 |user_id|integer|index: true, null: false|
+<<<<<<< HEAD
 |name|string|null: false|
+=======
+|group_name|string|null: false|
+>>>>>>> 4eec78d3e5c9f762cdf01c0177ef2bf3c371d49a
 
 ### Association
 - has_many :messages
@@ -62,6 +71,10 @@ Things you may want to cover:
 
 ### Association
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 4eec78d3e5c9f762cdf01c0177ef2bf3c371d49a
 - belongs_to :group
 - belongs_to :user
 
