@@ -1,48 +1,40 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %meta{:charset => "utf-8"}/
-    %title ChatSpace
-    %link{:href => "style.css", :rel => "stylesheet"}/
-  %body
-    .flashbox
-    .chat-side
-      .side-header
-        .side-header__box
-          %p test-user
-          %ul.side-header__box__menu
-            %li.side-header__box__menu__edit
-              %a{:href => ""}= fa_icon("edit")
-            %li.side-header__box__menu__cog
-              %a{:href => ""}= fa_icon("cog")
-      .groups
-        .group
-          .group__name
-            %p group
-          .group__message
-            %p message
-    .chat-main
-      .main-header
-        .main-header__box
-          .main-header__box__group
-            %p group
-            %p
-          .main-header__box__member
-            %p member
-        .main-header__edit
-          %p EDIT
-      .messages
-        .message
-          .message__name
-            %p name
-          .message__text
-            %p text
-      .form
-        %form.new_message{:action => "#", :method => ""}
-          .input-box
-            %input.input_new_message{:name => "", :placeholder => "type", :type => "text"}/
-            %label.new_image{:for => "message_image"}
-              %i.fa.fa-image
-              %input#message_image{:name => "", :type => "file"}/
-          %a.button01{:href => "#"} Send
+.flashbox
+.chat-side
+  .side-header
+    .side-header__box
+      %p test-user
+      %ul.side-header__box__menu
+        %li.side-header__box__menu__edit
+          %a{ href: ""}= fa_icon("edit")
+        %li.side-header__box__menu__cog
+          %a{ href: ""}= fa_icon("cog")
+  .groups
+    .group
+      .group__name
+        %p group
+      .group__message
+        %p message
+.chat-main
+  .main-header
+    .main-header__box
+      .main-header__box__group
+        %p group
+        %p
+      .main-header__box__member
+        %p member
+    .main-header__edit
+      %p EDIT
+  .messages
+    .message
+      .message__name
+        %p name
+      .message__text
+        %p text
+  .form
+    %form.new_message{action: "#", method: ""}
+      .input-box
+        %input.input_new_message{name: "", placeholder: "type", type: "text"}/
+        %label.new_image{for: "message_image"}
+          %i.fa.fa-image
+          %input#message_image{name: "", type: "file"}/
+      %a.button01{href: "#"} Send

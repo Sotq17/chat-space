@@ -1,3 +1,181 @@
 // Place all the styles related to the messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+// .flashbox{
+//   background-color: #38AEF0;
+//   color: white;
+//   font-size: 1rem;
+//   font-weight: lighter;
+//   text-align: center;
+//   width: 100vw;
+//   height: 30px
+// }
+
+
+.chat-side{
+  background-color: #2F3E51;
+  width: 300px;
+  height: 100%;
+  position: fixed;
+    a {
+      color: white;
+    }
+}
+
+.side-header {
+  float:left;
+  height: 100px;
+  width: 100%;
+  background-color: #253141;
+  display: flex;
+    &__box {
+      padding: 40px 20px;
+      width: 260px;
+      font-weight: bold;
+      color: white;
+      justify-content: space-between;
+      display: flex;
+        &__menu{
+          display: inline-flex;
+          li{
+            margin-left: 0.3rem;
+          }
+        }
+    }
+}
+
+
+.groups{
+  height: calc(100vh - 100px);
+  padding: 20px 20px 0;
+  margin-top: 100px;
+}
+
+.group{
+  margin-bottom: 40px;
+  color: white;
+  &__name{
+    margin-bottom: 5px;
+    font-size: 15px;
+  }
+  &__message{
+  font-size: 11px
+  }
+}
+
+
+
+.chat-main {
+  width: calc(100vw - 300px);
+  float: right;
+}
+
+.main-header{
+  position: fixed;
+  height: 100px;
+  width: 100%;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #eee;
+    &__box{
+      margin-top: 35px;
+      &__group{
+        font-size: 20px;
+        color: #333333;
+      }
+      &__member{
+        font-weight: bold;
+        margin-top: 15px;
+        font-size: 12px;
+        color: #999999;
+      }
+    }
+    &__edit{
+      height: 40px;
+      line-height: 40px;
+      padding: 0 20px;
+      margin-top: 30px;
+      border: solid 1px #38aef0;
+      right: 40px;
+      position: fixed;
+      color: #38aef0;
+    }
+}
+
+.messages{
+  height: calc(100vh - 282px);
+  padding: 46px 40px;
+  background-color: #fafafa;
+  margin: 100px 0px 90px 0px;
+}
+
+.message{
+  padding-bottom: 45px;
+  &__name{
+    color:#333333;
+    font-size: 20px;
+    padding-bottom: 15px;
+  }
+  &__text{
+    color:#999999;
+    font-size: 12px;
+  }
+}
+
+.form{
+  position: fixed;
+  bottom: 0;
+  background-color: #DDDDDD;
+  height: 90px;
+  width: calc(100vw - 300px);
+  .new_image {
+    font-size: 1.3rem;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+      #message_image{
+        display: none;
+      }
+  }
+    .input-box{
+      position: relative;
+      width: 100%;
+      display: flex;
+    }
+  .new_message{
+    height: 50px;
+    padding: 20px 0px 25px 40px;
+    color: #434a54;
+    border-style: none;
+    display: flex;
+  }
+  .input_new_message{
+  width: 100%;
+  padding-left: 10px;
+ }
+}
+
+
+.button01{
+  margin: 0 40px 0 15px;
+  width: 100px;
+  color: #FFF;
+  background-color: #38AEF0;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover{
+     background-color: #66CCFF;
+  }
+}
