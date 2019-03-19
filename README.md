@@ -26,12 +26,10 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
-
 ## userテーブル
 
 |Column|Type|Options|
 |------|----|-------|
-|group_id|integer|null: false|
 |name|string|
 |email|string|null :false, unique :true|
 |password|string|null :false|
@@ -39,7 +37,7 @@ Things you may want to cover:
 ### Association
 - has_many :messages
 - has_many :groups ,through: :users_groups
-
+- has_many :users_groups
 
 ## groupテーブル
 
@@ -47,10 +45,15 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|index: true, null: false|
 |name|string|null: false|
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 
 ### Association
 - has_many :messages
 - has_many :users ,through: :users_groups
+- has_many :users_groups
 
 
 ## users_groupsテーブル
