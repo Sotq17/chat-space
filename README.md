@@ -17,8 +17,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|refernces|foreign_key:true|
-|group_id|refernces|foreign_key:true|
+|user_id|refernces|foreign_key: true|
+|group_id|refernces|foreign_key: true|
 |body|text|
 |image|string|
 
@@ -30,9 +30,9 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|index: true|
-|email|string|null :false, unique :true|
-|password|string|null :false|
+|name|string|index: true, null: false, unique: true|
+|email|string|null: false, unique: true|
+|password|string|null: false|
 
 ### Association
 - has_many :messages
@@ -43,7 +43,6 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|index: true, null: false|
 |name|string|null: false|
 
 
@@ -57,30 +56,14 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|integer|
-|group_id|integer|
+|user_id|refernces|foreign_key: true|
+|group_id|refernces|foreign_key: true|
 
 ### Association
 
 - belongs_to :group
 - belongs_to :user
 
-
-## users_groupsテーブル
-
-|lumn|Type|Options|
-|------|----|-------|
-|user_id|integer|
-|group_id|integer|
-
-### Association
-
-<<<<<<< HEAD
-=======
-
->>>>>>> 4eec78d3e5c9f762cdf01c0177ef2bf3c371d49a
-- belongs_to :group
-- belongs_to :user
 
 * Database initialization
 
