@@ -64,6 +64,7 @@ Things you may want to cover:
 - belongs_to :group
 - belongs_to :user
 
+
 * Database initialization
 
 * How to run the test suite
