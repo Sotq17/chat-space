@@ -30,7 +30,7 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|name|string|
+|name|string|index: true|
 |email|string|null :false, unique :true|
 |password|string|null :false|
 
@@ -45,10 +45,7 @@ Things you may want to cover:
 |------|----|-------|
 |user_id|integer|index: true, null: false|
 |name|string|null: false|
-<<<<<<< Updated upstream
-=======
 
->>>>>>> Stashed changes
 
 ### Association
 - has_many :messages
