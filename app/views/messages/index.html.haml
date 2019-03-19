@@ -5,9 +5,13 @@
       %p test-user
       %ul.side-header__box__menu
         %li.side-header__box__menu__edit
-          %a{ href: ""}= fa_icon("edit")
+          = link_to  do
+            %i.fa.fa-edit
         %li.side-header__box__menu__cog
-          %a{ href: ""}= fa_icon("cog")
+          = link_to  do
+            %i.fa.fa-cog
+
+
   .groups
     .group
       .group__name
