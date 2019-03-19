@@ -68,7 +68,7 @@ Things you may want to cover:
 
 ## users_groupsテーブル
 
-|Column|Type|Options|
+|lumn|Type|Options|
 |------|----|-------|
 |user_id|integer|
 |group_id|integer|
