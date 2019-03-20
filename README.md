@@ -17,8 +17,8 @@ Things you may want to cover:
 
 |Column|Type|Options|
 |------|----|-------|
-|user_id|refernces|foreign_key: true|
-|group_id|refernces|foreign_key: true|
+|user_id|refernces|foreign_key:true|
+|group_id|refernces|foreign_key:true|
 |body|text|
 |image|string|
 
@@ -63,7 +63,6 @@ Things you may want to cover:
 
 - belongs_to :group
 - belongs_to :user
-
 
 * Database initialization
 
