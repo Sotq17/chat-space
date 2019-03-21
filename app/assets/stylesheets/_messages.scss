@@ -11,6 +11,7 @@ html, body {
 }
 
 .main-header{
+  overflow: scroll;
   position: fixed;
   height: 100px;
   width: 100%;
@@ -44,6 +45,11 @@ html, body {
 }
 
 .messages{
+  // height: calc(100vh - 190px);
+  overflow: scroll;
+
+
+
   height: calc(100vh - 282px);
   padding: 46px 40px;
   background-color: #fafafa;
@@ -53,19 +59,27 @@ html, body {
 .message{
   padding-bottom: 45px;
   &__name{
-    color:#333333;
-    font-size: 20px;
-    padding-bottom: 15px;
+    color: #434a54;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  &__date{
+    color: #999999;
+    font-size: 12px;
+    margin-left: 10px;
   }
   &__text{
-    color:#999999;
-    font-size: 12px;
+    color: #434a54;
+    font-size: 14px;
+    margin-bottom: 10px;
   }
 }
+
 
 .form{
   position: fixed;
   bottom: 0;
+  right: 0;
   background-color: #DDDDDD;
   height: 90px;
   width: calc(100vw - 300px);
@@ -73,7 +87,7 @@ html, body {
     font-size: 1.3rem;
     position: absolute;
     top: 10px;
-    right: 10px;
+    right: 25px;
     cursor: pointer;
       #message_image{
         display: none;
@@ -92,22 +106,25 @@ html, body {
     display: flex;
   }
   .input_new_message{
-  width: 100%;
-  padding-left: 10px;
+    height: 50px;
+    width: 100%;
+    padding: 0 40px 0 10px;
+    color: #434a54;
+    border-style: none;
+    margin-right:15px;
  }
-}
-
-
-.button01{
-  margin: 0 40px 0 15px;
-  width: 100px;
-  color: #FFF;
-  background-color: #38AEF0;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  &:hover{
-     background-color: #66CCFF;
+  &__submit{
+    margin-right: 40px;
+    width: 100px;
+    padding: 0 30px;
+    color: #FFF;
+    background-color: #38AEF0;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:hover{
+       background-color: #66CCFF;
+    }
   }
 }

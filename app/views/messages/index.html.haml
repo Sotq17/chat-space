@@ -1,29 +1,23 @@
-.flashbox
 .wrapper
+  .flashbox
   = render 'shared/side_bar'
-.chat-main
-  .main-header
-    .main-header__box
-      .main-header__box__group
-        %p group
-        %p
-      .main-header__box__member
-        %p member
-    .main-header__edit
-      %p EDIT
-  .messages
-    .message
-      .message__name
-        %p name
-      .message__text
-        %p text
+  .chat-main
+    .main-header
+      .main-header__box
+        .main-header__box__group
+          = @group.name
+        .main-header__box__member
+          - @group.user_groups.each do |user_group|
+            = user_group.user.name
+        .main-header__edit
+          %p EDIT
+    .messages
+      = render @messages
   .form
-    %form.new_message{action: "#", method: ""}
+    = form_for [@group, @message] do |f|
       .input-box
-        %input.input_new_message{name: "", placeholder: "type", type: "text"}/
-        %label.new_image{for: "message_image"}
-          %i.fa.fa-image
-          %input#message_image{name: "", type: "file"}/
-      %a.button01{href: "#"} Send
-
-
+        = f.text_field :content, class: 'input_new_message', placeholder: 'type a message'
+        = f.label :image, class: 'new_image' do
+          = fa_icon 'picture-o', class: 'fa.fa-image'
+          = f.file_field :image, id: 'message_image'
+      = f.submit 'Send', class: 'form__submit'
