@@ -39,14 +39,14 @@
 }
 
 .group{
-  margin-bottom: 40px;
   color: white;
   &__name{
     margin-bottom: 5px;
     font-size: 15px;
   }
   &__message{
-  font-size: 11px
+  font-size: 11px;
+  margin-bottom: 40px;
   }
 }
 
