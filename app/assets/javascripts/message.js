@@ -27,7 +27,7 @@ $(function() {
         console.log(this)
         $('.form__submit').removeAttr('data-disable-with');
         //  追加（二度クリック可）
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
         // 投稿時にスクロールで一番下まで
         var formData = new FormData(this);
         var url = $(this).attr('action')
