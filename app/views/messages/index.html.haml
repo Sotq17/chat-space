@@ -9,8 +9,8 @@
         .main-header__box__member
           - @group.user_groups.each do |user_group|
             = user_group.user.name
-        .main-header__edit
-          %p EDIT
+      .main-header__edit
+        %p EDIT
     .messages
       = render @messages
   .form
