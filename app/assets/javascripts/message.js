@@ -1,5 +1,5 @@
 $(function() {
-    function buildHTML(message) {
+    function buildMessageHTML(message) {
         if(message.image !== null) {
             var image =  '<img class="message" src= "' + message.image + '" >'
           }else {
@@ -40,7 +40,7 @@ $(function() {
             contentType: false,
         })
         .done(function(message){
-            var html = buildHTML(message);
+            var html = buildMessageHTML(message);
             $('.messages').append(html)
             $('.input_new_message').val('')
         })
