@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function(){
     function buildMessageHTML(message) {
         if(message.image !== null) {
             var image =  '<img class="message" src= "' + message.image + '" >'
@@ -22,14 +22,13 @@ $(function() {
         return html;
     }
 
-    $("form").on("submit", function(e) {
+    $('.new_message').on("submit", function(e) {
         e.preventDefault();
-        console.log(this)
+        var formData = new FormData(this);
         $('.form__submit').removeAttr('data-disable-with');
         //  追加（二度クリック可）
         $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
         // 投稿時にスクロールで一番下まで
-        var formData = new FormData(this);
         var url = $(this).attr('action')
         $.ajax({
             url: url,

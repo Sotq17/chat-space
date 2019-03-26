@@ -2,7 +2,7 @@
   background-color: #2F3E51;
   width: 300px;
   height: 100%;
-  position: fixed;
+  float: left;
     a {
       color: white;
       text-decoration: none;
@@ -33,9 +33,10 @@
 
 
 .groups{
-  height: calc(100vh - 100px);
+  height: calc(100vh - 120px);
   padding: 20px 20px 0;
   margin-top: 100px;
+  overflow: scroll;
 }
 
 .group{
