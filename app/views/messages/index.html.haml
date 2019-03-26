@@ -10,7 +10,7 @@
           - @group.user_groups.each do |user_group|
             = user_group.user.name
       .main-header__edit
-        %p EDIT
+        = link_to "Edit",edit_group_path(@group),class: 'edit_btn'
     .messages
       = render @messages
   .form
@@ -20,4 +20,4 @@
         = f.label :image, class: 'new_image' do
           = fa_icon 'picture-o', class: 'fa.fa-image'
           = f.file_field :image, id: 'message_image'
-      = f.submit 'Send', class: 'form__submit'
+      = f.submit 'Send', class: 'form__submit', id: 'submit_button'

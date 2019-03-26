@@ -1,0 +1,9 @@
+
+%div{class: "chat-group-user clearfix js-chat-member"} 
+    %p.chat-group-user__name
+        = user.name
+    %a{class:"user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn", id: "remove_btn"} 削除
+    = hidden_field_tag('group[user_ids][]', user.id)
+
+
+
