@@ -40,23 +40,11 @@ $(document).on('turbolinks:load', function(){
 
     .done(function(users) {
       $("#user-search-result").empty();
-      if (users.length !== 0) {
         users.forEach(function(user){
           appendUser(user);
         });
-      }
       // インクリメンタルサーチで一致する名前を取得し、引数としてappendUserに渡す
-
-      else {
-        appendErrMsgToHTML("一致するユーザーがいません");
-      }
-      // ユーザー検索ができない時の表示を呼び出す
     })
-      .fail(function() {
-        alert('ユーザー検索に失敗しました');
-      });
-      // エラー時の記述を表示させる
-    return false;
   };
 });
 
