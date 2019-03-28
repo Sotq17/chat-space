@@ -6,7 +6,7 @@ $(document).on('turbolinks:load', function(){
             var image = ``;
           }
         var html =
-        '<li class="message">' +
+            '<div class="message" data-id=' + message.id + '>' + 
             '<p class="message__name">' +
                 message.name +
             '</p>' +
@@ -18,7 +18,7 @@ $(document).on('turbolinks:load', function(){
             '</p>' +
             '<br>' +
             image
-        '</li>'
+        '</div>'
         return html;
     }
 
@@ -46,5 +46,5 @@ $(document).on('turbolinks:load', function(){
         .fail(function() {
             alert('メッセージを送信できません');
         });
-    })
-})
+    });
+});
