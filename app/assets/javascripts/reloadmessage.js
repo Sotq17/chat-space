@@ -29,6 +29,7 @@ $(document).on('turbolinks:load', function () {
 
     $(function(){
       if (location.pathname.match(/\/groups\/\d+\/messages/)) {
+        // グループ＋メッセージにマッチしたURLのパスの部分を取得・設定する
       setInterval(update, 5000);
       }
     });
