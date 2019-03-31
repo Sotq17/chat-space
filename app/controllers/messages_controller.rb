@@ -2,7 +2,6 @@ class MessagesController < ApplicationController
   before_action :set_group
 
   def index
-    # binding.pry
     @message = Message.new
     @messages = @group.messages.includes(:user)
     respond_to do |format|
@@ -12,7 +11,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-    logger.debug Time.now
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
