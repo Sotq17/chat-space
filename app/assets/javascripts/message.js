@@ -45,7 +45,7 @@ $(document).on('turbolinks:load', function(){
              // 投稿時にスクロールで一番下まで
         })
         .fail(function() {
-            alert('メッセージを送信できません');
+            alert('メッセージを入力してください');
         });
     });
 });
