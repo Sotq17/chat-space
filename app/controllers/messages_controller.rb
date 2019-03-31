@@ -12,6 +12,7 @@ class MessagesController < ApplicationController
   end
 
   def create
+    logger.debug Time.now
     @message = @group.messages.new(message_params)
     if @message.save
       respond_to do |format|
