@@ -41,6 +41,7 @@ $(document).on('turbolinks:load', function(){
             var html = buildMessageHTML(message);
             $('.messages').append(html)
             $('.input_new_message').val('')
+            $('#message_image').val('')
             $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
              // 投稿時にスクロールで一番下まで
         })
