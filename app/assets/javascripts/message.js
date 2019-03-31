@@ -27,8 +27,7 @@ $(document).on('turbolinks:load', function(){
         var formData = new FormData(this);
         $('.form__submit').removeAttr('data-disable-with');
         //  追加（二度クリック可）
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight});
-        // 投稿時にスクロールで一番下まで
+
         var url = $(this).attr('action')
         $.ajax({
             url: url,
@@ -42,6 +41,8 @@ $(document).on('turbolinks:load', function(){
             var html = buildMessageHTML(message);
             $('.messages').append(html)
             $('.input_new_message').val('')
+            $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},'fast');
+             // 投稿時にスクロールで一番下まで
         })
         .fail(function() {
             alert('メッセージを送信できません');

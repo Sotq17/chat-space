@@ -23,9 +23,6 @@ $(document).on('turbolinks:load', function () {
     }
     // HTMLを作成し、ReloadMessageの引数として返す
 
-    function ScrollToNewMessage(){
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-    }
 
     $(function(){
       if (location.pathname.match(/\/groups\/\d+\/messages/)) {
@@ -52,7 +49,7 @@ $(document).on('turbolinks:load', function () {
         $.each(data, function(i, data){
           var html = ReloadMessage(data);
           $('.messages').append(html)
-          ScrollToNewMessage();
+          $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
         })
       }
       })
