@@ -11,7 +11,7 @@ $(document).on('turbolinks:load', function () {
                     message.name +
                 '</p>' +
                 '<p class="message__date">' +
-                    message.date +
+                    message.created_at +
                 '</p>' +
                 '<p class="message__text">' +
                     message.content +
